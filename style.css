@@ -1,0 +1,87 @@
+body {
+    background-color: cornflowerblue;
+    font-family: Arial, sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border-style: none;
+    font-size: xxx-large;
+    color: brown;
+    background-color: rgb(193, 233, 152);
+    cursor: pointer;
+}
+.box:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+.new {
+    width: 100px;
+    height: 50px;
+    border-radius: 0.5rem;
+    border-style: none;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+h1 {
+    position: absolute;
+    margin-top: 30vh;
+    width: 100%;
+    text-align: center;
+    font-size: 333%;
+    font-family: sans-serif;
+    color: grey;
+    opacity: 0.5;
+}
+canvas {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    display: none; 
+}
+#winner {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.winner {
+    color: gold;
+    font-size: 2rem;
+    animation: flash 1s infinite;
+}
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+#ss{
+    font-size: 30px;
+}
